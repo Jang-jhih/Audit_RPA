@@ -1,7 +1,13 @@
 import xlwings as xl
-
+# import os
+# import win32com.client
+from openpyxl import load_workbook
+import docx
 import warnings
 warnings.filterwarnings("ignore")
+
+
+
 
 def CallVBA():
     app = xl.App(visible=True)
@@ -15,11 +21,9 @@ def CallVBA():
 
 
 
-import docx
 
-import os
-import win32com.client
-from openpyxl import load_workbook
+
+
 
 def info_update(doc,old_info, new_info):
     '''此函數用於批量替換合同中需要替換的信息

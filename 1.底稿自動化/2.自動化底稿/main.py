@@ -12,6 +12,6 @@ from AutoReport.Replace_word import *
 print(f"開始執行程式")
 CallVBA()
 print(f'緩衝兩秒')
-time.sleep(2)
+time.sleep(5)
 print(f'開始製作稽核報告Word檔')
 Replace_Word()

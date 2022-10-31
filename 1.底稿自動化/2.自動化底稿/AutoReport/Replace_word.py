@@ -10,15 +10,10 @@ warnings.filterwarnings("ignore")
 
 
 def CallVBA():
-    app = xl.App(visible=True)
+    app = xl.App(visible=False)
     wb = app.books.open('工作底稿.xlsm')
     wb.macro('main')()
     app.quit()
-
-
-
-
-
 
 
 
@@ -30,8 +25,7 @@ def info_update(doc,old_info, new_info):
     doc:文件
     old_info和new_info：原文字和需要替換的新文字
     '''
-    
-    
+
 
     #讀取段落中的所有run，找到需替換的信息進行替換
     for para in doc.paragraphs: #

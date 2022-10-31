@@ -17,18 +17,14 @@ def CallVBA():
 
 
 
-
-
-
 def info_update(doc,old_info, new_info):
     '''此函數用於批量替換合同中需要替換的信息
     doc:文件
     old_info和new_info：原文字和需要替換的新文字
     '''
 
-
     #讀取段落中的所有run，找到需替換的信息進行替換
-    for para in doc.paragraphs: #
+    for para in doc.paragraphs: 
 
         for run in para.runs:
             run.text = run.text.replace(old_info, new_info) #替換信息
